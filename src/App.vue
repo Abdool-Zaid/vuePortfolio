@@ -1,15 +1,17 @@
 <template>
-<h3 @click="exitNav()">logo</h3>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>|
-    <router-link to="/skills">skills</router-link>|
-    <router-link to="/resume">resume</router-link>|
-    <router-link to="/projects">projects</router-link>|
-    <router-link to="/testimonials">testimonials</router-link>|
-    <router-link to="/contact">contact</router-link>
+  <h3 @click="exitNav()" >
+    logo
+  </h3>
+  <nav id="nav">
+    <router-link  @click="exitNav()"  to="/">Home</router-link>
+    <router-link  @click="exitNav()" to="/about">About</router-link>
+    <router-link  @click="exitNav()" to="/skills">skills</router-link>
+    <router-link  @click="exitNav()" to="/resume">resume</router-link>
+    <router-link  @click="exitNav()" to="/projects">projects</router-link>
+    <router-link  @click="exitNav()" to="/testimonials">testimonials</router-link>
+    <router-link  @click="exitNav()" to="/contact">contact</router-link>
     <div>
-<h3 @click="exitNav()"> X </h3>
+      <h3 @click="exitNav()">X</h3>
     </div>
   </nav>
   <router-view />
@@ -21,19 +23,26 @@
   </footer>
 </template>
 <script>
-export default{
-  methods:{
-    exitNav(){
-console.log("active", Math.random()*10)
-}
-  }
-}
+export default {
+  methods: {
+    exitNav() {
+      document.getElementById("nav").classList.toggle("active");
+      console.log("active", Math.random() * 10);
+    },
+  },
+};
 </script>
 <style>
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+:root {
+  --sixty: #2A52BE;
+  --thirty: #C8BDAF;
+  --acc: #5F0763;
+
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -45,11 +54,22 @@ console.log("active", Math.random()*10)
 
 nav {
   position: absolute;
+  top: 0;
   z-index: 5;
   height: 100%;
-  background-color: #d2a4e9;
+  width: 100vw;
+  background-color: #d2a4e9a3;
   display: flex;
-  padding: 30px;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 1%;
+  transform-origin: top;
+  transform: scale(0);
+}
+nav.active {
+  transform: scale(1);
 }
 
 nav a {
