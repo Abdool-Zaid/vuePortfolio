@@ -1,16 +1,13 @@
 <template >
-  <div>
-    landing page
-
-
-    
-  </div>
+    <div>
+        projects page
+    </div>
 </template>
 <script>
 export default {
-  
+    
 }
 </script>
 <style >
-  
+    
 </style>

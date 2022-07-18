@@ -1,7 +1,48 @@
 {
     "projects":[
-    {}
-    ],
+    { "techStack":["html","css","javaScript","vue","bootstrap","MySQL"],
+"name":" ",
+"desc":" ",
+"liveLink":" ",
+"githubLink":" ",
+"preview":""
+},
+    { "techStack":["html","css","javaScript","vue","bootstrap","MySQL"],
+"name":" ",
+"desc":" ",
+"liveLink":" ",
+"githubLink":" ",
+"preview":""
+},
+    { "techStack":["html","css","javaScript","vue","bootstrap","MySQL"],
+"name":" ",
+"desc":" ",
+"liveLink":" ",
+"githubLink":" ",
+"preview":""
+},
+    { "techStack":["html","css","javaScript","vue","bootstrap","MySQL"],
+"name":" ",
+"desc":" ",
+"liveLink":" ",
+"githubLink":" ",
+"preview":""
+},
+    { "techStack":["html","css","javaScript","vue","bootstrap","MySQL"],
+"name":" ",
+"desc":" ",
+"liveLink":" ",
+"githubLink":" ",
+"preview":""
+},
+    { "techStack":["html","css","javaScript","vue","bootstrap","MySQL"],
+"name":" ",
+"desc":" ",
+"liveLink":" ",
+"githubLink":" ",
+"preview":""
+}
+ ],
     "resume":[
     {}
     ],
