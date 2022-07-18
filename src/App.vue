@@ -1,4 +1,5 @@
 <template>
+<div v-on="scroll">
   <h3 @click="exitNav()" >
     logo
   </h3>
@@ -21,15 +22,26 @@
       <p>contact</p>
     </router-link>
   </footer>
+      </div>
 </template>
 <script>
 export default {
+  mounted() {
+  window.addEventListener('scroll',()=>{
+        console.log(scrollY)
+      })
+},
   methods: {
     exitNav() {
       document.getElementById("nav").classList.toggle("active");
       console.log("active", Math.random() * 10);
     },
+  
+    
   },
+  computed:{
+    
+  }
 };
 </script>
 <style>
