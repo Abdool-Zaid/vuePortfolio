@@ -1,13 +1,10 @@
-<template >
-    <div>
-        testimonials page
-    </div>
+<template>
+  <div>
+    testimonials page 
+   
+  </div>
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>
-<style >
-    
-</style>
+<style></style>
