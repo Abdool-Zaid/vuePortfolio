@@ -3,7 +3,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap" rel="stylesheet">
   <div v-on="scroll">
-    <h3 @click="exitNav()">logo</h3>
+  <div id="logo">
+    <h3 @click="exitNav()">Abdool Zaid</h3>
+  </div>
     <div id="target">
       <ul id="notepadItems">
         <li>1</li>
@@ -861,9 +863,11 @@ export default {
    border-radius:20px;
    font-family: 'Edu SA Beginner', cursive;
 font-size: 110%;
+scroll-behavior: smooth;
 }
 :root {
   --sixty: #2a52be;
+  --bg:#2a52beba;
   --thirty: #efefef;
   --acc: #5f0763;
   --ss: 1%;
@@ -879,6 +883,16 @@ font-size: 110%;
   text-align: center;
   color: #2c3e50;
 }
+#logo{
+  position: fixed;
+  top: 0;
+  display: flex;
+  padding: 1%;
+  z-index: 10;
+  background-color: var(--bg);
+    border: 2px solid var(--acc);
+
+}
 
 nav {
   position: absolute;
@@ -886,7 +900,7 @@ nav {
   z-index: 5;
   height: 100%;
   width: 100vw;
-  background-color: #2a52beba;
+  background-color: var(--bg); 
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -904,6 +918,7 @@ nav.active {
   top: 0;
   left: 0;
   
+  
   width: var(--snx);
   background-color: var(--sixty);
   transform-origin: top;
@@ -917,6 +932,7 @@ nav.active {
 nav a {
   font-weight: bold;
   color: var(--thirty);
+  text-decoration-line: none;
 
 }
 

@@ -1,10 +1,11 @@
 <template>
   <div>
-    testimonials page 
-   
+<testimonials></testimonials>   
   </div>
 </template>
 <script>
-export default {};
+import testimonials from '../components/testimonials.vue';
+export default {
+  components: { testimonials },};
 </script>
 <style></style>
