@@ -21,9 +21,6 @@
  
 export default {
       name: 'contactForm',
-
-
-
 }
 </script>
 <style >
