@@ -830,6 +830,7 @@
       <router-link to="/contact">
         <p>contact</p>
       </router-link>
+         <a href="../assets/bedtime_story.pdf" download>bedtimeStory</a>
     </footer>
   </div>
 </template>
@@ -873,6 +874,8 @@ scroll-behavior: smooth;
   --ss: 1%;
   --se: 1em;
   --snx: 30vw;
+  --height:80vh;
+  --width:70vw;
   --sny: 40vh;
   --mute:#00000000; 
 }
@@ -917,8 +920,6 @@ nav.active {
   position: absolute;
   top: 0;
   left: 0;
-  
-  
   width: var(--snx);
   background-color: var(--sixty);
   transform-origin: top;
@@ -940,7 +941,24 @@ nav a.router-link-exact-active {
   color: var(--acc);
 }
 footer {
+  display: flex;
   position: fixed;
   bottom: 0;
+}
+footer >*{
+  margin: var(--ss);
+  padding: var(--ss);
+  text-decoration-line: none;
+
+}
+button{
+  
+    margin: var(--ss);
+    padding: var(--ss);
+   background-color:var(--mute);
+    box-shadow:  2px 2px 6px #bebebe,
+             -2px -2px 6px var(--acc);
+    color: var(--acc);
+    width: fit-content;
 }
 </style>

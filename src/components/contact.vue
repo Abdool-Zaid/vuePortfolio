@@ -33,8 +33,8 @@ export default {
 }
 form {
     display: flex;
-  height: 80vh;
-  width: 70vw;
+  height: var(--height);
+  width: var(--width);
   flex-direction: column;
   flex-wrap: wrap;
     justify-content: center;
@@ -54,7 +54,9 @@ form :nth-child(1){
 }
 form >button{
     background-color:var(--mute);
-    border-color: var(--acc);
+    box-shadow:  2px 2px 6px #bebebe,
+             -2px -2px 6px var(--acc);
+    color: var(--acc);
     width: fit-content;
    
 }

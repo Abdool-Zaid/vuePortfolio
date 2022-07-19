@@ -1,5 +1,5 @@
 <template>
- <contactForm></contactForm>>
+ <contactForm></contactForm>
 </template>
 <script>
 import contactForm from  '../components/contact.vue';

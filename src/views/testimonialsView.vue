@@ -6,6 +6,8 @@
 <script>
 import testimonials from '../components/testimonials.vue';
 export default {
-  components: { testimonials },};
+  components: { testimonials },
+  
+  };
 </script>
 <style></style>
