@@ -5,6 +5,14 @@
     <div id="resumeBody">
         <div class="jobCard" v-for="job in resume" :key="job">
         <h1>{{job.name}}</h1>
+        <h4>{{job.jobTitle}}</h4>
+        <p>{{job.desc}}</p>
+        <ul>
+            <li>{{job.development[0].skill}}</li>
+            <!-- <li>{{job.development[1].skill}}</li> -->
+        </ul>
+        <p>duration: {{job.duration}}</p>
+        <a :href="job.link" target="blank"></a>
         </div>
     </div>
 </template>
@@ -33,6 +41,11 @@ export default {
     /* border: 3px solid var(--acc); */
         box-shadow:  2px 2px 6px #bebebe,
              -2px -2px 6px var(--acc);
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
     
 </style>
