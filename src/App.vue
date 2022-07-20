@@ -827,6 +827,7 @@
         <h3 @click="exitNav()">X</h3>
       </div>
     </nav>
+    <scrollBack>scrolled Back </scrollBack>
     <router-view />
 
     <footer>
@@ -834,10 +835,19 @@
         <p>contact</p>
       </router-link>
       <a href="../assets/bedtime_story.pdf" download>bedtimeStory</a>
+      <!-- <router-link to="/" tag="#logo"> scroll back</router-link> -->
+      <router-link :to="{ path: '/'+'logo'}"><a >scrollBack</a></router-link>
+
     </footer>
   </div>
 </template>
 <script>
+// const router = new VueRouter({
+//   routes: [
+//     // dynamic segments start with a colon
+//     { path: '/:id', component: home }
+//   ]
+// })
 export default {
   mounted() {
     let lastScrollTop = 0;
@@ -884,6 +894,7 @@ export default {
   font-family: "Edu SA Beginner", cursive;
   font-size: 110%;
   scroll-behavior: smooth;
+  transition: smooth;
 }
 :root {
   --sixty: #2a52be;

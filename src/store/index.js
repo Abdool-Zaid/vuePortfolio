@@ -51,12 +51,18 @@ export default createStore({
         image: "",
       },
     ],
-    skill: [
+    skills: [
       { name: "html", level: 90 },
+      { name: "English", level: 90 },
+      { name: "Japenese", level: 12 },
       { name: "CSS", level: 78 },
       { name: "JavaScript", level: 75 },
       { name: "MySQL", level: 94 },
       { name: "vue", level: 60 },
+      { name: "Communication", level: 74 },
+      { name: "Time Management", level:85 },
+      { name: "Problem-Solving", level:96 },
+      { name: "Public Speaking", level:936 },
     ],
     resume: [
       {

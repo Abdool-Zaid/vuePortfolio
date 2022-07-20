@@ -46,6 +46,9 @@ form >*{
     border-color: var(--mute);
     width: 80%;
 }
+form >*:focus{
+outline: var(--mute);
+}
 form :nth-child(1){
     color: var(--acc);
 }

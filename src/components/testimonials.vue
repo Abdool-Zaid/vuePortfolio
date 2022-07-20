@@ -3,7 +3,7 @@
             <h1>Hear what people have to say about me</h1>
     </div>
     <div id="testimonialBody">
-        <div class="testCard" v-for="testimonial in testimonials">
+        <div class="testCard" v-for="testimonial in testimonials" >
         <div class="introHead">
             <img :src="testimonial.image">
 <h2>{{testimonial.name}}</h2>
