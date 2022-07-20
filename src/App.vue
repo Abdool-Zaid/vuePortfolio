@@ -1,11 +1,14 @@
 <template>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap"
+    rel="stylesheet"
+  />
   <div v-on="scroll">
-  <div id="logo">
-    <h3 @click="exitNav()">Abdool Zaid</h3>
-  </div>
+    <div id="logo">
+      <h3 @click="exitNav()">Abdool Zaid</h3>
+    </div>
     <div id="target">
       <ul id="notepadItems">
         <li>1</li>
@@ -830,16 +833,28 @@
       <router-link to="/contact">
         <p>contact</p>
       </router-link>
-         <a href="../assets/bedtime_story.pdf" download>bedtimeStory</a>
+      <a href="../assets/bedtime_story.pdf" download>bedtimeStory</a>
     </footer>
   </div>
 </template>
 <script>
 export default {
   mounted() {
-    window.addEventListener("scroll", () => {
-      console.log(Math.ceil(scrollY));
-    });
+    let lastScrollTop = 0;
+    window.addEventListener(
+      "scroll",
+      function () {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop) {
+          console.log("scroll down");
+          // this.document.
+        } else {
+          console.log("scroll up");
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+      },
+      false
+    );
     window.addEventListener("contextmenu", (Event) => {
       document.getElementById("target").classList.toggle("miniNotepad");
       console.log("toggled", Math.random() * 10);
@@ -849,35 +864,39 @@ export default {
   methods: {
     exitNav() {
       document.getElementById("nav").classList.toggle("active");
-      console.log("active", Math.random() * 10);
+      // console.log("active", Math.random() * 10);
     },
   },
   computed: {},
+  data() {
+    return {
+      lastVal: this.$store.state.lastVal,
+    };
+  },
 };
 </script>
 <style>
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-   border-radius:20px;
-   font-family: 'Edu SA Beginner', cursive;
-font-size: 110%;
-scroll-behavior: smooth;
+  border-radius: 20px;
+  font-family: "Edu SA Beginner", cursive;
+  font-size: 110%;
+  scroll-behavior: smooth;
 }
 :root {
   --sixty: #2a52be;
-  --bg:#2a52beba;
+  --bg: #2a52beba;
   --thirty: #efefef;
   --acc: #5f0763;
   --ss: 1%;
   --se: 1em;
   --snx: 30vw;
-  --height:80vh;
-  --width:70vw;
+  --height: 80vh;
+  --width: 70vw;
   --sny: 40vh;
-  --mute:#00000000; 
+  --mute: #00000000;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -886,15 +905,14 @@ scroll-behavior: smooth;
   text-align: center;
   color: #2c3e50;
 }
-#logo{
+#logo {
   position: fixed;
   top: 0;
   display: flex;
   padding: 1%;
   z-index: 10;
   background-color: var(--bg);
-    border: 2px solid var(--acc);
-
+  border: 2px solid var(--acc);
 }
 
 nav {
@@ -903,7 +921,7 @@ nav {
   z-index: 5;
   height: 100%;
   width: 100vw;
-  background-color: var(--bg); 
+  background-color: var(--bg);
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -934,7 +952,6 @@ nav a {
   font-weight: bold;
   color: var(--thirty);
   text-decoration-line: none;
-
 }
 
 nav a.router-link-exact-active {
@@ -945,20 +962,17 @@ footer {
   position: fixed;
   bottom: 0;
 }
-footer >*{
+footer > * {
   margin: var(--ss);
   padding: var(--ss);
   text-decoration-line: none;
-
 }
-button{
-  
-    margin: var(--ss);
-    padding: var(--ss);
-   background-color:var(--mute);
-    box-shadow:  2px 2px 6px #bebebe,
-             -2px -2px 6px var(--acc);
-    color: var(--acc);
-    width: fit-content;
+button {
+  margin: var(--ss);
+  padding: var(--ss);
+  background-color: var(--mute);
+  box-shadow: 2px 2px 6px #bebebe, -2px -2px 6px var(--acc);
+  color: var(--acc);
+  width: fit-content;
 }
 </style>
