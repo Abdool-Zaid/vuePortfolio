@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: "skills",
+  name: 'skills',
   data() {
     return {
       skills: this.$store.state.skills,
@@ -40,8 +40,8 @@ export default {
     /* min-width: 130px; */
     margin: var(--se);
     padding: var(--se);
-    background-color: var(--thirty);
-    color: var(--sixty);
+   color: var(--thirty);
+    background-color: var(--sixty);
     /* border: 3px solid var(--acc); */
         box-shadow:  2px 2px 6px #bebebe,
              -2px -2px 6px var(--acc);

@@ -1,10 +1,10 @@
 <template >
-    <div>
-        projects page
-    </div>
+    <projects></projects>
 </template>
 <script>
+import projects from '../components/projects.vue'
 export default {
+  components: { projects, },
     
 }
 </script>
