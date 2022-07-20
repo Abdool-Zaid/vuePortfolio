@@ -1,6 +1,7 @@
 <template>
   <div>
-<testimonials></testimonials>   
+<testimonials></testimonials>
+  
   </div>
 </template>
 <script>

@@ -1,6 +1,8 @@
 <template >
     <div>
-        skills page
+    <div id="SkillsHeader">
+        <h1></h1>
+    </div>
         <skills></skills>
     </div>
 </template>

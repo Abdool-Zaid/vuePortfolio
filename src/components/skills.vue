@@ -1,10 +1,11 @@
 <template>
   <div>
     <div id="skillsBody">
-      <div class="testCard" v-for="skill in skills">
+      <div class="testCard" v-for="skill in skills" :key="skill">
         <div class="skillCard">
           <h2>{{ skill.name }}</h2>
           <p>level:{{ skill.level }}%</p>
+          <div class="level" style="width:50px height:1% background-color"></div>
         </div>
       </div>
     </div>
@@ -18,6 +19,11 @@ export default {
       skills: this.$store.state.skills,
     };
   },
+//   computed:{
+//     skills:()=>{
+// return this.$store.state.skills
+//     }
+//   }
 };
 </script>
 <style scoped>
