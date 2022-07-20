@@ -50,28 +50,7 @@
 
 export default {
 
-  mounted() {
-    let lastScrollTop = 0;
-    window.addEventListener(
-      "scroll",
-      function () {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > lastScrollTop) {
-          console.log("scroll down");
-          // this.document.
-        } else {
-          console.log("scroll up");
-        }
-        lastScrollTop = st <= 0 ? 0 : st;
-      },
-      false
-    );
-    window.addEventListener("contextmenu", (Event) => {
-      document.getElementById("target").classList.toggle("miniNotepad");
-      console.log("toggled", Math.random() * 10);
-      Event.preventDefault();
-    });
-  },
+  
   methods: {
     exitNav() {
       document.getElementById("nav").classList.toggle("active");
@@ -79,11 +58,7 @@ export default {
     },
   },
   computed: {},
-  data() {
-    return {
-      lastVal: this.$store.state.lastVal,
-    };
-  },
+  
 };
 </script>
 <style>
