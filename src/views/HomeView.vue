@@ -4272,7 +4272,7 @@
     </div>
     <about class="scrollContent"></about>
     <resume class="scrollContent" />
-    <Skills class="scrollContent"></Skills>
+    <skills class="scrollContent"></skills>
     <projects class="scrollContent"></projects>
     <testimonials class="scrollContent"></testimonials>
 
@@ -4357,10 +4357,10 @@ export default {
   -ms-user-select: none;
   user-select: none;
 }
-.scrollContent {
+/* .scrollContent {
   position: fixed;
   top: 0;
   transform-origin: top;
   transform: scale(0);
-}
+} */
 </style>
