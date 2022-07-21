@@ -8,7 +8,9 @@
       <testimonials />
       <contactForm />
     </carousel>
+
   </div>
+  
 </template>
 
 <script>
