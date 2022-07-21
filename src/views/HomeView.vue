@@ -4303,29 +4303,23 @@ export default {
       "scroll",
       function () {
         let st = window.pageYOffset || document.documentElement.scrollTop;
+        // total height
+        let docHeight =
+          document.height !== undefined
+            ? document.height
+            : document.body.offsetHeight;
+
         if (st > lastScrollTop) {
-          document.querySelectorAll(".scrollContent").style.transform = scale(
-            1 +
-              (this.window.screenY /
-                this.document.documentElement.scrollHeight) *
-                100
-          );
-          console.log(
-            (this.window.screenY / this.document.documentElement.scrollHeight) *
-              100
-          );
+          //current position
+          // console.log(this.window.scrollY);
+          // page height
+          // console.log(window.innerHeight);
+
+          this.document.querySelectorAll(
+            ".scrollContent"
+          ).style.backgroundColor = "red";
           console.log("scroll down");
         } else {
-          document.querySelectorAll(".scrollContent").style.transform = scale(
-            1 -
-              (this.window.screenY /
-                this.document.documentElement.scrollHeight) *
-                100
-          );
-          console.log(
-            (this.window.screenY / this.document.documentElement.scrollHeight) *
-              100
-          );
           console.log("scroll up");
         }
         lastScrollTop = st <= 0 ? 0 : st;
