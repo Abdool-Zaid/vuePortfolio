@@ -5,10 +5,9 @@
       <h1>{{ job.name }}</h1>
       <h4>{{ job.jobTitle }}</h4>
       <p>{{ job.desc }}</p>
-      <ul>
-        <li>{{ job.development[0].skill }}</li>
+      <p>developed: {{ job.development[0].skill }}</p>
         <!-- <li>{{job.development[1].skill}}</li> -->
-      </ul>
+      
       <p>duration: {{ job.duration }}</p>
       <a :href="job.link" target="blank"></a>
     </div>
