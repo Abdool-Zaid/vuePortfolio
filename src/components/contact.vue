@@ -12,10 +12,12 @@
       
       <textarea name="message" required placeholder="Message"></textarea>
       <textarea name="conatact" required placeholder="Optional contact information"></textarea>
-      <button type="submit">Send</button>
+        <button type="submit">Send</button>
+      <div id="contactButtons">
       <a href="mailto:aztoorabally7447@gmail.com" target="_blank" rel="noopener noreferrer">mail</a>
       <a href="https://www.linkedin.com/in/abdool-zaid-toorabally-004921237/" target="_blank" rel="noopener noreferrer">linkedin</a>
       <a href="tel:+27621213907" rel="noopener noreferrer">call</a>
+      </div>
     </form>
         </div>
   </div>
@@ -26,8 +28,11 @@ export default {
       name: 'contactForm',
 }
 </script>
-<style >
+<style scoped >
   #formBody{
+    font-size: small;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -37,7 +42,7 @@ form {
   width: var(--width);
   flex-direction: column;
   flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
   align-content: stretch;
   align-items: center;
   background-color: var(--sixty);
@@ -48,6 +53,14 @@ form >*{
     background-color: var(--thirty);
     border-color: var(--mute);
     width: 80%;
+}
+#contactButtons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color:var(--mute);
+width: fit-content;
+border: 2px dashed var(--acc);
 }
 form >*:focus{
 outline: var(--mute);
@@ -61,9 +74,13 @@ form >button{
              -2px -2px 6px var(--acc);
     color: var(--acc);
     width: fit-content;
+  margin: var(--se);
+  padding: var(--se);
    
 }
-form >a{
+a{
+  margin: var(--se);
+  padding: var(--se);
     background-color:var(--mute);
     box-shadow:  2px 2px 6px #bebebe,
              -2px -2px 6px var(--acc);

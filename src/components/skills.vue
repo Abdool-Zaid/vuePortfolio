@@ -45,5 +45,14 @@ export default {
     /* border: 3px solid var(--acc); */
         box-shadow:  2px 2px 6px #bebebe,
              -2px -2px 6px var(--acc);
+
 }
+
+/* media Querries */
+    @media only screen and (max-width: 270px) {
+        .skillCard{
+            
+            font-size: 0.6em;
+        }        
+    }
 </style>

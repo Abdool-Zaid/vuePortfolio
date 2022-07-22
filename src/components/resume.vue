@@ -47,5 +47,11 @@ ul{
     flex-direction: column;
     justify-content: flex-start;
 }
-    
+    /* media Querries */
+    @media only screen and (max-width: 460px) {
+        .jobCard{
+            
+            font-size: small;
+        }        
+    }
 </style>
