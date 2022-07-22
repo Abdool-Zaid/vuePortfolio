@@ -2,26 +2,13 @@
   <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
 
   <div id="mainBody">
-    <flickity class="flickity" ref="flickity" :options="flickityOptions">
-      <div class="carousel-cell">
-        <landing class="appContent" />
-      </div>
-      <div class="carousel-cell">
-        <about class="appContent" />
-      </div>
-      <div class="carousel-cell">
-        <resume class="appContent" />
-      </div>
-      <div class="carousel-cell">
-        <projects class="appContent" />
-      </div>
-      <div class="carousel-cell">
-        <testimonials class="appContent" />
-      </div>
-      <div class="carousel-cell">
-        <contactForm class="appContent" />
-      </div>
-    </flickity>
+        <landing />
+        <about />
+        <skills />
+        <resume />
+        <projects />
+        <testimonials />
+        <contactForm />
   </div>
 </template>
 
@@ -33,8 +20,6 @@ import testimonials from "../components/testimonials.vue";
 import contactForm from "../components/contact.vue";
 import Projects from "../components/projects.vue";
 import landing from "../components/landing.vue";
-import Flickity from "vue-flickity";
-
 export default {
   components: {
     about,
@@ -44,7 +29,6 @@ export default {
     contactForm,
     Projects,
     landing,
-    Flickity,
   },
   mounted() {
     let lastScrollTop = 0;
