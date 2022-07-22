@@ -94,4 +94,10 @@ a{
       text-decoration-line: none;
 }
 
+/* media Querries */
+    @media only screen and (max-width: 420px) {
+        #contactButtons{
+            flex-direction: row;
+        }        
+    }
 </style>    
