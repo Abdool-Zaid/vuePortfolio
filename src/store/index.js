@@ -45,12 +45,7 @@ export default createStore({
         `,
         image: "https://raw.githubusercontent.com/Abdool-Zaid/vuePortfolio/main/src/assets/Tristan.JPG",
       },
-      {
-        name: "",
-        relate: "",
-        testimonial: "",
-        image: "",
-      },
+   
     ],
     skills: [
       { name: "html", level: 90 },

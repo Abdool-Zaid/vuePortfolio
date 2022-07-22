@@ -11,6 +11,7 @@
     "core-js": "^3.8.3",
     "flickity": "^3.0.0",
     "json-server": "^0.4.2",
+    "keen-slider": "^6.7.0",
     "serve": "^14.0.1",
     "vue": "^3.2.13",
     "vue-flickity": "^1.2.1",

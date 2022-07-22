@@ -59,7 +59,9 @@ form >*{
     width: 80%;
 }
 #contactButtons{
+  width: 100%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   background-color:var(--mute);

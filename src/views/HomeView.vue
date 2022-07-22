@@ -105,14 +105,15 @@ export default {
   overflow-y: hidden;
 
 }
-.appContent{
-  overflow-y: scroll;
-}
 
 .flickity-page-dots{
 
   position: fixed;
   bottom: 0;
+}
+.carousel-cell{
+  overflow-y: scroll!important;
+
 }
 
 .flickity-button-icon{
