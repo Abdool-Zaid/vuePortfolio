@@ -32,6 +32,9 @@ export default {
 }
 </script>
 <style scoped >
+#contactHeader{
+  margin-top: var(--se);
+}
 
   #formBody{
     font-size: small;
@@ -98,8 +101,15 @@ a{
 }
 
 /* media Querries */
-    @media only screen and (max-width: 420px) {
+ @media only screen and (max-width: 1020px) {
         #contactButtons{
+          padding: var(--ss);
+            flex-direction: row;
+        }        
+    }
+    @media only screen and (max-width: 420px) {
+      #contactButtons{
+          margin: var(--ss);
             flex-direction: row;
         }        
     }
