@@ -36,12 +36,14 @@ export default {
     margin: var(--se);
     padding: var(--se);
     width: 35vw;
-    border: 2px dashed var(--acc);
+    color: var(--thirty);
+    background-color: var(--sixty);
 
 }
 img{
-border-radius: 50%;
+/* border-radius: 40%; */
 width: 100%;
+
 aspect-ratio: 2;
 }
 

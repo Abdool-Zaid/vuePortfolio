@@ -1,4 +1,5 @@
 <template >
+
  <div>
     <div id="contactHeader">
       <H1>contact me</H1>
@@ -12,11 +13,13 @@
       
       <textarea name="message" required placeholder="Message"></textarea>
       <textarea name="conatact" required placeholder="Optional contact information"></textarea>
-        <button type="submit">Send</button>
+        <button type="submit"> &#8658;</button>
       <div id="contactButtons">
-      <a href="mailto:aztoorabally7447@gmail.com" target="_blank" rel="noopener noreferrer">mail</a>
-      <a href="https://www.linkedin.com/in/abdool-zaid-toorabally-004921237/" target="_blank" rel="noopener noreferrer">linkedin</a>
-      <a href="tel:+27621213907" rel="noopener noreferrer">call</a>
+      <a href="mailto:aztoorabally7447@gmail.com" target="_blank" rel="noopener noreferrer"> &#9993;</a>
+      <a href="https://www.linkedin.com/in/abdool-zaid-toorabally-004921237/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="tel:+27621213907" rel="noopener noreferrer">&#9742;</a>
       </div>
     </form>
         </div>
@@ -61,6 +64,7 @@ form >*{
   background-color:var(--mute);
 width: fit-content;
 border: 2px dashed var(--acc);
+font-size: 1rem;
 }
 form >*:focus{
 outline: var(--mute);
@@ -69,6 +73,7 @@ form :nth-child(1){
     color: var(--acc);
 }
 form >button{
+  font-size: 1rem;
     background-color:var(--mute);
     box-shadow:  2px 2px 6px #bebebe,
              -2px -2px 6px var(--acc);
@@ -87,8 +92,6 @@ a{
     color: var(--acc);
     width: fit-content;
       text-decoration-line: none;
-  
-   
 }
 
 </style>    
