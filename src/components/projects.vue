@@ -26,6 +26,10 @@ export default {
 };
 </script>
 <style scoped>
+#projectHeader{
+
+  margin-top:3em ;
+}
 #projectbody{
   width: 94vw;
     display: flex;

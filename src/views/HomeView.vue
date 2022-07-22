@@ -1,27 +1,27 @@
 <template>
-<!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
+  <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
 
   <div id="mainBody">
-     <flickity  class="flickity" ref="flickity" :options="flickityOptions">
-     <div class="carousel-cell">
-      <landing class="appContent"/>
-     </div>
-    <div class="carousel-cell">
-      <about class="appContent" />
-    </div>
-    <div class="carousel-cell">
-      <resume class="appContent" />
-    </div>
-    <div class="carousel-cell">
-      <projects class="appContent" />
-    </div>
-    <div class="carousel-cell">
-      <testimonials class="appContent" />
-    </div>
-    <div class="carousel-cell">
-      <contactForm class="appContent" />
-    </div>
-  </flickity>
+    <flickity class="flickity" ref="flickity" :options="flickityOptions">
+      <div class="carousel-cell">
+        <landing class="appContent" />
+      </div>
+      <div class="carousel-cell">
+        <about class="appContent" />
+      </div>
+      <div class="carousel-cell">
+        <resume class="appContent" />
+      </div>
+      <div class="carousel-cell">
+        <projects class="appContent" />
+      </div>
+      <div class="carousel-cell">
+        <testimonials class="appContent" />
+      </div>
+      <div class="carousel-cell">
+        <contactForm class="appContent" />
+      </div>
+    </flickity>
   </div>
 </template>
 
@@ -33,8 +33,7 @@ import testimonials from "../components/testimonials.vue";
 import contactForm from "../components/contact.vue";
 import Projects from "../components/projects.vue";
 import landing from "../components/landing.vue";
-import Flickity from 'vue-flickity';
-
+import Flickity from "vue-flickity";
 
 export default {
   components: {
@@ -46,7 +45,6 @@ export default {
     Projects,
     landing,
     Flickity,
-   
   },
   mounted() {
     let lastScrollTop = 0;
@@ -85,43 +83,40 @@ export default {
   data() {
     return {
       lastVal: this.$store.state.lastVal,
- flickityOptions: {
+      flickityOptions: {
         initialIndex: 1,
         prevNextButtons: true,
         pageDots: true,
         wrapAround: true,
-        freeScroll: true
+        freeScroll: true,
         // any options from Flickity can be used
-      }      
-
+      },
     };
-    
   },
 };
 </script>
 <style>
-.flickity{
+.flickity {
   height: 100vh;
-  overflow-y: hidden;
-
+  /* position: fixed !important; */
+  left: 0 !important;
+  /* overflow-y: hidden; */
 }
 
-.flickity-page-dots{
-
+.flickity-page-dots {
   position: fixed;
   bottom: 0;
 }
-.carousel-cell{
-  overflow-y: scroll!important;
-
+.carousel-cell {
+  /* overflow-y: scroll !important; */
 }
 
-.flickity-button-icon{
- background-color: var(--acc);
- position: fixed;
- left: 0;
+.flickity-button-icon {
+  background-color: var(--acc);
+  /* position: fixed; */
+  left: 0;
 }
-svg{
+svg {
   color: var(--thirty);
 }
 #scrollBody {
