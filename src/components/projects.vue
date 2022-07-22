@@ -27,6 +27,7 @@ export default {
 </script>
 <style scoped>
 #projectbody{
+  width: 94vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

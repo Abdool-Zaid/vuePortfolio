@@ -26,8 +26,9 @@ export default {
     },
 }
 </script>
-<style >
+<style scoped >
 #resumeBody{
+    width: 94vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -47,11 +48,11 @@ ul{
     flex-direction: column;
     justify-content: flex-start;
 }
-    /* media Querries */
-    @media only screen and (max-width: 460px) {
-        .jobCard{
-            
-            font-size: small;
-        }        
-    }
+        /* media Querries */
+        @media only screen and (max-width: 460px) {
+            .jobCard{
+                
+                font-size: small;
+            }        
+        }
 </style>

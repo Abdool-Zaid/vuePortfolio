@@ -14,8 +14,10 @@ export default {
 
 }
 </script>
-<style >
+<style scoped >
+
 #aboutBody {
+  width: 94vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

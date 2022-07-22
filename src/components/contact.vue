@@ -1,6 +1,6 @@
 <template >
 
- <div>
+ <div id="contactBody">
     <div id="contactHeader">
       <H1>contact me</H1>
     </div>
@@ -32,9 +32,10 @@ export default {
 }
 </script>
 <style scoped >
+
   #formBody{
     font-size: small;
-    width: 100vw;
+    width: 94vw;
     height: 100vh;
     display: flex;
     justify-content: center;

@@ -3,20 +3,23 @@
 
   <div id="mainBody">
      <flickity  class="flickity" ref="flickity" :options="flickityOptions">
+     <div class="carousel-cell">
+      <landing class="appContent"/>
+     </div>
     <div class="carousel-cell">
-      <about />
+      <about class="appContent" />
     </div>
     <div class="carousel-cell">
-      <resume />
+      <resume class="appContent" />
     </div>
     <div class="carousel-cell">
-      <projects />
+      <projects class="appContent" />
     </div>
     <div class="carousel-cell">
-      <testimonials />
+      <testimonials class="appContent" />
     </div>
     <div class="carousel-cell">
-      <contactForm />
+      <contactForm class="appContent" />
     </div>
   </flickity>
   </div>
@@ -29,6 +32,7 @@ import skills from "../components/skills.vue";
 import testimonials from "../components/testimonials.vue";
 import contactForm from "../components/contact.vue";
 import Projects from "../components/projects.vue";
+import landing from "../components/landing.vue";
 import Flickity from 'vue-flickity';
 
 
@@ -40,6 +44,7 @@ export default {
     resume,
     contactForm,
     Projects,
+    landing,
     Flickity,
    
   },
@@ -95,6 +100,29 @@ export default {
 };
 </script>
 <style>
+.flickity{
+  height: 100vh;
+  overflow-y: hidden;
+
+}
+.appContent{
+  overflow-y: scroll;
+}
+
+.flickity-page-dots{
+
+  position: fixed;
+  bottom: 0;
+}
+
+.flickity-button-icon{
+ background-color: var(--acc);
+ position: fixed;
+ left: 0;
+}
+svg{
+  color: var(--thirty);
+}
 #scrollBody {
   background-color: var(--mute);
   color: var(--mute);
