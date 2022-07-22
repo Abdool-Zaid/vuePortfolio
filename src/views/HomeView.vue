@@ -2,33 +2,40 @@
   <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
 
   <div ref="container" class="keen-slider" id="mainBody">
-    <div class="keen-slider__slide number-slide1"><div class="CContent">
-
-      <landing /></div>
+    <div class="keen-slider__slide number-slide1">
+      <div class="CContent">
+        <landing />
+      </div>
     </div>
-    <div class="keen-slider__slide number-slide2"><div class="CContent">
-
-      <about /></div>
+    <div class="keen-slider__slide number-slide1">
+      <div class="CContent">
+        <about />
+      </div>
     </div>
-    <div class="keen-slider__slide number-slide3"><div class="CContent">
-
-      <skills /></div>
+    <div class="keen-slider__slide number-slide1">
+      <div class="CContent">
+        <skills />
+      </div>
     </div>
-    <div class="keen-slider__slide number-slide4"><div class="CContent">
-
-      <resume /></div>
+    <div class="keen-slider__slide number-slide1">
+      <div class="CContent">
+        <resume />
+      </div>
     </div>
-    <div class="keen-slider__slide number-slide5"><div class="CContent">
-
-      <projects /></div>
+    <div class="keen-slider__slide number-slide1">
+      <div class="CContent">
+        <projects />
+      </div>
     </div>
-    <div class="keen-slider__slide number-slide6"><div class="CContent">
-
-      <testimonials /></div>
+    <div class="keen-slider__slide number-slide1">
+      <div class="CContent">
+        <testimonials />
+      </div>
     </div>
-    <div class="keen-slider__slide number-slide7"><div class="CContent">
-
-      <contactForm /></div>
+    <div class="keen-slider__slide number-slide1">
+      <div class="CContent">
+        <contactForm />
+      </div>
     </div>
   </div>
 </template>
@@ -137,7 +144,6 @@ export default {
   data() {
     return {
       lastVal: this.$store.state.lastVal,
-      
     };
   },
 };
@@ -174,56 +180,7 @@ body {
   );
 }
 
-.number-slide2 {
-  background: rgb(255, 75, 64);
-  background: linear-gradient(
-    128deg,
-    rgba(255, 154, 63, 1) 0%,
-    rgba(255, 75, 64, 1) 100%
-  );
-}
 
-.number-slide3 {
-  background: rgb(182, 255, 64);
-  background: linear-gradient(
-    128deg,
-    rgba(182, 255, 64, 1) 0%,
-    rgba(63, 255, 71, 1) 100%
-  );
-  background: linear-gradient(
-    128deg,
-    rgba(189, 255, 83, 1) 0%,
-    rgba(43, 250, 82, 1) 100%
-  );
-}
-
-.number-slide4 {
-  background: rgb(64, 255, 242);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 255, 242, 1) 0%,
-    rgba(63, 188, 255, 1) 100%
-  );
-}
-
-.number-slide5 {
-  background: rgb(255, 64, 156);
-  background: linear-gradient(
-    128deg,
-    rgba(255, 64, 156, 1) 0%,
-    rgba(255, 63, 63, 1) 100%
-  );
-}
-
-.number-slide6 {
-  background: rgb(64, 76, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 76, 255, 1) 0%,
-    rgba(174, 63, 255, 1) 100%
-    marg
-  );
-}
 
 .thumbnail .keen-slider__slide {
   font-size: 30px;
@@ -238,20 +195,21 @@ body {
 }
 
 /* mine */
-#mainBody{
+#mainBody {
   width: 100vw;
   height: 98vh;
-  overflow-y:scroll ;
-
+  overflow-y: scroll !important ;
 }
-#mainBody >*{
-  width: 94vw;
+.keen-slider__slide .CContent {
+  margin-top: var(--se);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
 }
-.keen-slider__slide .CContent{
-  margin-top:var(--se)  ;
-display: flex;
-justify-content: center;
-align-items: center;
+.keen-slider__slide .CContent > * {
+  overflow-y: auto;
 }
 
 #scrollBody {

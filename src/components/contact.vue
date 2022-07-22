@@ -17,7 +17,7 @@
       <div id="contactButtons">
       <a href="mailto:aztoorabally7447@gmail.com" target="_blank" rel="noopener noreferrer"> &#9993;</a>
       <a href="https://www.linkedin.com/in/abdool-zaid-toorabally-004921237/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin-in"></i>
+        <img src="https://raw.githubusercontent.com/Abdool-Zaid/vuePortfolio/main/src/assets/LinkedIn-Logos/LinkedIn-Logos/LI-In-Bug.png" alt="linkedin" id="contactLogo">
       </a>
       <a href="tel:+27621213907" rel="noopener noreferrer">&#9742;</a>
       </div>
@@ -72,6 +72,12 @@ width: fit-content;
 border: 2px dashed var(--acc);
 font-size: 1rem;
 }
+#contactLogo{
+  width: 1em;
+  aspect-ratio: 1;
+  background-color: var(--thirty);
+  
+}
 form >*:focus{
 outline: var(--mute);
 }
@@ -112,5 +118,9 @@ a{
           margin: var(--ss);
             flex-direction: row;
         }        
+        #contactBody{
+          margin-top:2em ;
+font-size:0.8em;
+        }
     }
 </style>    
