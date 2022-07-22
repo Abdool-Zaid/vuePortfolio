@@ -58,6 +58,9 @@ export default {
       document.getElementById("nav").classList.toggle("active");
       // console.log("active", Math.random() * 10);
     },
+
+
+    
   },
   computed: {},
   
