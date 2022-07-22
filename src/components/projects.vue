@@ -9,8 +9,8 @@
         <h1>{{ project.name }}</h1>
         <p>{{ project.description }}</p>
         <p>techStack: {{ project.techStack }}</p>
-        <a :href="project.liveLink"><h4>live</h4></a>
-        <a :href="project.githubLink"><h4>github</h4></a>
+        <a :href="project.liveLink" target="blank"><h4>live</h4></a>
+        <a :href="project.githubLink" target="blank"><h4>github</h4></a>
       </div>
     </div>
   </div>

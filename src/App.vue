@@ -6,6 +6,7 @@
     href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap"
     rel="stylesheet"
   />
+  
   <div v-on="scroll">
     <div id="logo">
       <h3 @click="exitNav()">Abdool Zaid</h3>

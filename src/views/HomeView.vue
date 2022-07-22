@@ -1,16 +1,25 @@
 <template>
-  <div id="mainBody">
-    <carousel :autoplay="true" :nav="false">
-      <about />
-      <resume />
-      <skills />
-      <projects />
-      <testimonials />
-      <contactForm />
-    </carousel>
+<!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
 
+  <div id="mainBody">
+     <flickity  class="flickity" ref="flickity" :options="flickityOptions">
+    <div class="carousel-cell">
+      <about />
+    </div>
+    <div class="carousel-cell">
+      <resume />
+    </div>
+    <div class="carousel-cell">
+      <projects />
+    </div>
+    <div class="carousel-cell">
+      <testimonials />
+    </div>
+    <div class="carousel-cell">
+      <contactForm />
+    </div>
+  </flickity>
   </div>
-  
 </template>
 
 <script>
@@ -20,7 +29,8 @@ import skills from "../components/skills.vue";
 import testimonials from "../components/testimonials.vue";
 import contactForm from "../components/contact.vue";
 import Projects from "../components/projects.vue";
-import carousel from "vue-owl-carousel";
+import Flickity from 'vue-flickity';
+
 
 export default {
   components: {
@@ -30,7 +40,8 @@ export default {
     resume,
     contactForm,
     Projects,
-    carousel,
+    Flickity,
+   
   },
   mounted() {
     let lastScrollTop = 0;
@@ -69,7 +80,17 @@ export default {
   data() {
     return {
       lastVal: this.$store.state.lastVal,
+ flickityOptions: {
+        initialIndex: 1,
+        prevNextButtons: true,
+        pageDots: true,
+        wrapAround: true,
+        freeScroll: true
+        // any options from Flickity can be used
+      }      
+
     };
+    
   },
 };
 </script>

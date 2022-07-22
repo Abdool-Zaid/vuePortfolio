@@ -13,6 +13,9 @@
       <textarea name="message" required placeholder="Message"></textarea>
       <textarea name="conatact" required placeholder="Optional contact information"></textarea>
       <button type="submit">Send</button>
+      <a href="mailto:aztoorabally7447@gmail.com" target="_blank" rel="noopener noreferrer">mail</a>
+      <a href="https://www.linkedin.com/in/abdool-zaid-toorabally-004921237/" target="_blank" rel="noopener noreferrer">linkedin</a>
+      <a href="tel:+27621213907" rel="noopener noreferrer">call</a>
     </form>
         </div>
   </div>
@@ -58,6 +61,16 @@ form >button{
              -2px -2px 6px var(--acc);
     color: var(--acc);
     width: fit-content;
+   
+}
+form >a{
+    background-color:var(--mute);
+    box-shadow:  2px 2px 6px #bebebe,
+             -2px -2px 6px var(--acc);
+    color: var(--acc);
+    width: fit-content;
+      text-decoration-line: none;
+  
    
 }
 
