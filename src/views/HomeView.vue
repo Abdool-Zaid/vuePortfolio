@@ -2,37 +2,37 @@
   <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
 
   <div ref="container" class="keen-slider" id="mainBody">
-    <div class="keen-slider__slide number-slide1">
+    <div class="keen-slider__slide number-slide1 CContent">
       <div class="CContent">
         <landing />
       </div>
     </div>
-    <div class="keen-slider__slide number-slide1">
+    <div class="keen-slider__slide number-slide1 CContent">
       <div class="CContent">
         <about />
       </div>
     </div>
-    <div class="keen-slider__slide number-slide1">
+    <div class="keen-slider__slide number-slide1 CContent">
       <div class="CContent">
         <skills />
       </div>
     </div>
-    <div class="keen-slider__slide number-slide1">
+    <div class="keen-slider__slide number-slide1 CContent">
       <div class="CContent">
         <resume />
       </div>
     </div>
-    <div class="keen-slider__slide number-slide1">
+    <div class="keen-slider__slide number-slide1 CContent">
       <div class="CContent">
         <projects />
       </div>
     </div>
-    <div class="keen-slider__slide number-slide1">
+    <div class="keen-slider__slide number-slide1 CContent">
       <div class="CContent">
         <testimonials />
       </div>
     </div>
-    <div class="keen-slider__slide number-slide1">
+    <div class="keen-slider__slide number-slide1 CContent">
       <div class="CContent">
         <contactForm />
       </div>
@@ -198,7 +198,9 @@ body {
 #mainBody {
   width: 100vw;
   height: 98vh;
-  overflow-y: scroll !important ;
+}
+.keen-slider__slide{
+  height: 94vh!important;
 }
 .keen-slider__slide .CContent {
   margin-top: var(--se);
@@ -206,10 +208,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: fit-content;
+  height:fit-content!important;
+  overflow-y: scroll !important ;
+
+
 }
 .keen-slider__slide .CContent > * {
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 #scrollBody {

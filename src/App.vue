@@ -40,7 +40,7 @@
       <router-link to="/contact">
         <p>contact</p>
       </router-link>
-      <a href="../assets/bedtime_story.pdf" download>bedtimeStory</a>
+      <a href="https://github.com/Abdool-Zaid/vuePortfolio/blob/main/src/assets/bedtime%20Story.pdf" download>bedtimeStory</a>
       <!-- <router-link to="/" tag="#logo"> scroll back</router-link> -->
       <router-link :to="{ path: '/'+'logo'}"><a >scrollBack</a></router-link>
 
