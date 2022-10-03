@@ -10,7 +10,7 @@
   
   <div v-on="scroll">
     <div id="logo">
-      <h3 @click="exitNav()"><link rel="icon" href="<%= BASE_URL %>favicon.ico">Abdool Zaid</h3>
+      <h3 @click="exitNav()">Abdool Zaid</h3>
     </div>
     <div id="target">
       <ul id="notepadItems">
@@ -102,13 +102,20 @@ nav {
   width: 100vw;
   background-color: var(--bg);
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-content: center;
   align-items: center;
   justify-content: space-evenly;
   padding-left: 1%;
   transform-origin: top;
   transform: scale(0);
+}
+nav>*{
+  padding: 1%;
+  z-index: 10;
+  background-color: var(--bg);
+  border: 2px solid var(--acc);
+  border-radius: 20px;
 }
 nav.active {
   transform: scale(1);
