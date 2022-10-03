@@ -7,6 +7,8 @@
     rel="stylesheet"
   />
   
+<div class="cursor"></div>
+<div class="cursor2"></div>
   
   <div v-on="scroll">
     <div id="logo">
@@ -49,8 +51,11 @@
 <script>
 
 
-export default {
 
+export default {
+mounted(){
+
+},
   
   methods: {
     exitNav() {
@@ -69,6 +74,8 @@ export default {
   font-size: 110%;
   scroll-behavior: smooth;
   transition: smooth;
+  cursor: url(), pointer;
+
 }
 :root {
   --sixty: #2a52be;
