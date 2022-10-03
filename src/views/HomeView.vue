@@ -1,43 +1,31 @@
 <template>
-  <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
 
-  <div ref="container" class="keen-slider" id="mainBody">
-    <div class="keen-slider__slide number-slide1 CContent">
-      <div class="CContent">
-        <landing />
-      </div>
+<div id="mainCarousel" class="carousel slide" data-bs-ride="true">
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <landing />
     </div>
-    <div class="keen-slider__slide number-slide1 CContent">
-      <div class="CContent">
-        <about />
-      </div>
+    <div class="carousel-item">
+      <about />
     </div>
-    <div class="keen-slider__slide number-slide1 CContent">
-      <div class="CContent">
-        <skills />
-      </div>
+    <div class="carousel-item">
+      <skills />
     </div>
-    <div class="keen-slider__slide number-slide1 CContent">
-      <div class="CContent">
-        <resume />
-      </div>
+    <div class="carousel-item">
+      <resume />
     </div>
-    <div class="keen-slider__slide number-slide1 CContent">
-      <div class="CContent">
-        <projects />
-      </div>
+    <div class="carousel-item">
+      <projects />
     </div>
-    <div class="keen-slider__slide number-slide1 CContent">
-      <div class="CContent">
-        <testimonials />
-      </div>
+    <div class="carousel-item">
+      <testimonials />
     </div>
-    <div class="keen-slider__slide number-slide1 CContent">
-      <div class="CContent">
-        <contactForm />
-      </div>
+    <div class="carousel-item">
+      <contactForm />
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -48,40 +36,7 @@ import testimonials from "../components/testimonials.vue";
 import contactForm from "../components/contact.vue";
 import Projects from "../components/projects.vue";
 import landing from "../components/landing.vue";
-import { useKeenSlider } from "keen-slider/vue.es";
-import "keen-slider/keen-slider.min.css";
 
-function ThumbnailPlugin(main) {
-  return (slider) => {
-    function removeActive() {
-      slider.slides.forEach((slide) => {
-        slide.classList.remove("active");
-      });
-    }
-    function addActive(idx) {
-      slider.slides[idx].classList.add("active");
-    }
-
-    function addClickEvents() {
-      slider.slides.forEach((slide, idx) => {
-        slide.addEventListener("click", () => {
-          main.value.moveToIdx(idx);
-        });
-      });
-    }
-
-    slider.on("created", () => {
-      addActive(slider.track.details.rel);
-      addClickEvents();
-      main.value.on("animationStarted", () => {
-        removeActive();
-        const next = main.value.animator.targetIdx || 0;
-        addActive(main.value.track.absToRel(next));
-        slider.moveToIdx(next);
-      });
-    });
-  };
-}
 
 export default {
   components: {
@@ -93,57 +48,9 @@ export default {
     Projects,
     landing,
   },
-  setup() {
-    const [container, slider] = useKeenSlider();
-    const [thumbnail] = useKeenSlider(
-      {
-        initial: 0,
-        slides: {
-          perView: 4,
-          spacing: 10,
-        },
-      },
-      [ThumbnailPlugin(slider)]
-    );
-    return { container, thumbnail };
-  },
-  mounted() {
-    let lastScrollTop = 0;
-    window.addEventListener(
-      "scroll",
-      function () {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        // total height
-        let docHeight =
-          document.height !== undefined
-            ? document.height
-            : document.body.offsetHeight;
 
-        if (st > lastScrollTop) {
-          //current position
-          console.log(this.window.scrollY);
-          // page height
-          // console.log(window.innerHeight);
-
-          document.getElementsByClassName("jobCard").style = color = "red";
-          // transform = "scale(0)";
-          console.log("scroll down");
-        } else {
-          console.log("scroll up");
-        }
-        lastScrollTop = st <= 0 ? 0 : st;
-      },
-      false
-    );
-    window.addEventListener("contextmenu", (Event) => {
-      document.getElementById("target").classList.toggle("miniNotepad");
-      console.log("toggled", Math.random() * 10);
-      Event.preventDefault();
-    });
-  },
   data() {
     return {
-      lastVal: this.$store.state.lastVal,
     };
   },
 };
@@ -156,67 +63,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="number-slide"],
-[class*=" number-slide"] {
-  background: grey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 50px;
-  color: #fff;
-  font-weight: 500;
-  height: 200px;
-  max-height: 100vh;
-}
-.keen-slider__slide {
-  width: 94vw !important;
-}
-.number-slide1 {
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
-}
-
-
-
-.thumbnail .keen-slider__slide {
-  font-size: 30px;
-  margin-top: 10px;
-  height: 100px;
-}
-.thumbnail .keen-slider__slide {
-  cursor: pointer;
-}
-.thumbnail .keen-slider__slide.active {
-  border: 2px dashed black;
-}
-
 /* mine */
 #mainBody {
   width: 100vw;
   height: 98vh;
 }
-.keen-slider__slide{
-  height: 94vh!important;
-}
-.keen-slider__slide .CContent {
-  margin-top: var(--se);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height:fit-content!important;
-  overflow-y: scroll !important ;
-
-
-}
-.keen-slider__slide .CContent > * {
-  overflow-y: scroll;
-}
-
 #scrollBody {
   background-color: var(--mute);
   color: var(--mute);
@@ -234,4 +85,10 @@ body {
   transform-origin: top;
   transform: scale(0);
 } */
+.pageFlowControl{
+position:fixed;
+top:0;
+height: 10vw;
+background-color: black;
+}
 </style>

@@ -1,7 +1,7 @@
 <template >
     <div id="landingBody">
-        aaaaaaaaaaaaaaaaaa
-    </div>
+<h1>←click my name </h1>
+</div>
 </template>
 <script>
 export default {

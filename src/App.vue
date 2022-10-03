@@ -19,15 +19,14 @@
       </ul>
     </div>
     <nav id="nav">
-      <router-link @click="exitNav()" to="/">Home</router-link>
-      <router-link @click="exitNav()" to="/about">About</router-link>
-      <router-link @click="exitNav()" to="/skills">skills</router-link>
-      <router-link @click="exitNav()" to="/resume">resume</router-link>
-      <router-link @click="exitNav()" to="/projects">projects</router-link>
-      <router-link @click="exitNav()" to="/testimonials"
-        >testimonials</router-link
-      >
-      <router-link @click="exitNav()" to="/contact">contact</router-link>
+
+    <button ><h3 type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="0" class="active" aria-current="true">Home</h3></button>
+    <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="1" ><h3>About</h3></button>
+    <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="2" ><h3>skills</h3></button>
+    <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="3" ><h3>resume</h3></button>
+    <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="4" ><h3>projects</h3></button>
+    <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="5" ><h3>testimonials</h3></button>
+    <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="6" ><h3>contact</h3></button>
       <div>
         <h3 @click="exitNav()">X</h3>
       </div>
@@ -37,13 +36,7 @@
 
 
     <footer>
-      <router-link to="/contact">
-        <p>contact</p>
-      </router-link>
-      <a href="https://github.com/Abdool-Zaid/vuePortfolio/blob/main/src/assets/bedtime%20Story.pdf" download>bedtimeStory</a>
-      <!-- <router-link to="/" tag="#logo"> scroll back</router-link> -->
-      <router-link :to="{ path: '/'+'logo'}"><a >scrollBack</a></router-link>
-
+        <p type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="6">contact</p>
     </footer>
   </div>
 </template>
@@ -56,14 +49,8 @@ export default {
   methods: {
     exitNav() {
       document.getElementById("nav").classList.toggle("active");
-      // console.log("active", Math.random() * 10);
     },
-
-
-    
   },
-  computed: {},
-  
 };
 </script>
 <style>

@@ -5,12 +5,10 @@
       <H1>contact me</H1>
     </div>
     <div id="formBody">
-
         <form action="https://formspree.io/f/xrgjnpzv" method="POST">
             <input type="name" name="name"  required  placeholder="Name"/>
       <input type="email" name="email"  required  placeholder="Email"/>
       <input type="company" name="company"  required  placeholder="Company"/>
-      
       <textarea name="message" required placeholder="Message"></textarea>
       <textarea name="conatact" required placeholder="Optional contact information"></textarea>
         <button type="submit"> &#8658;</button>
@@ -108,10 +106,14 @@ a{
 
 /* media Querries */
  @media only screen and (max-width: 1020px) {
+
         #contactButtons{
           padding: var(--ss);
             flex-direction: row;
-        }        
+        }       
+        form{
+          flex-direction: row;
+        } 
     }
     @media only screen and (max-width: 420px) {
       #contactButtons{
