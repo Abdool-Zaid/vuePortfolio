@@ -10,7 +10,7 @@
   
   <div v-on="scroll">
     <div id="logo">
-      <h3 @click="exitNav()">Abdool Zaid</h3>
+      <h3 @click="exitNav()"><link rel="icon" href="<%= BASE_URL %>favicon.ico">Abdool Zaid</h3>
     </div>
     <div id="target">
       <ul id="notepadItems">
