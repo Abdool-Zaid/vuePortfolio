@@ -10,27 +10,33 @@
   
   <div v-on="scroll">
     <div id="logo">
-      <h3 @click="exitNav()">Abdool Zaid</h3>
+      <h3   data-bs-toggle="modal" data-bs-target="#exampleModal" @click="exitNav()">Abdool Zaid</h3>
     </div>
-    <div id="target">
-      <ul id="notepadItems">
-        <li>1</li>
-        <li>2</li>
-      </ul>
-    </div>
-    <nav id="nav">
+  
 
-    <button ><h3 type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="0" class="active" aria-current="true">Home</h3></button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button ><h3 type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="0" class="active" aria-current="true">Home</h3></button>
     <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="1" ><h3>About</h3></button>
     <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="2" ><h3>skills</h3></button>
     <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="3" ><h3>resume</h3></button>
     <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="4" ><h3>projects</h3></button>
     <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="5" ><h3>testimonials</h3></button>
     <button type="button" data-bs-target="#mainCarousel" @click="exitNav()" data-bs-slide-to="6" ><h3>contact</h3></button>
-      <div>
-        <h3 @click="exitNav()">X</h3>
+          </div>
+      <div class="modal-footer">
       </div>
-    </nav>
+    </div>
+  </div>
+</div>
+
+   
     <router-view />
 
 
@@ -48,8 +54,8 @@ export default {
   
   methods: {
     exitNav() {
-      document.getElementById("nav").classList.toggle("active");
-    },
+      let clickEvent = new Event('click');
+        document.querySelector('.btn-close').dispatchEvent(clickEvent)    },
   },
 };
 </script>
